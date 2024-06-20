@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+.header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para la imagen */
+.header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Estilos para el texto */
+.gracias {
+    color: #333;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.header p{
+    color: blueviolet;
+
+}

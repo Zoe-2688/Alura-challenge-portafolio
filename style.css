@@ -1,0 +1,780 @@
+body, .tudo {
+    
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+     width: 100%;
+     max-width: auto;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    min-height: 100vh;
+    background: linear-gradient(to top, #000000, #ffafbd, #000000);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex; /* Flexbox para centrar secciones */
+    flex-direction: column; /* Alinea las secciones en una columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto dentro de los elementos de bloque */
+    overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+}
+.cinzel-text {
+    font-family: 'Cinzel', serif;
+    font-weight: 400; /* Puedes cambiar esto a 500 o 700 si necesitas un peso diferente */
+}
+
+
+/* Contenedor principal que ocupa toda la altura de la página */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente los elementos hijos */
+    align-items: center; /* Centra horizontalmente los elementos hijos */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    max-width: 100%; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 0; /* Opcional: Añade un poco de padding */
+}
+
+
+/* section nav */
+
+/* Ajustes específicos para el menú de navegación */
+.menu__list {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos del menú */
+    align-items: center; /* Centra verticalmente los elementos del menú */
+    margin: 0 auto; /* Centra el menú dentro del contenedor */
+    padding: 0;
+    list-style: none; /* Elimina los puntos de la lista */
+}
+
+.menu__list__item {
+    margin: 50px;
+    color: #F5F5F5;
+}
+
+nav {
+    margin-left: 50px;
+    margin-right: 20px;
+    display: flex;
+}
+
+/* Aplicar márgen derecho solo a los elementos dentro del nav, excepto al último */
+.menu__list > *:not(:last-child) {
+    margin-right: 10px; /* Ajusta el valor del margen derecho según sea necesario */
+}
+
+ol, ul, li {
+    display: inline-block;
+    padding: 0%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+
+/* Sección Menu */
+
+.menu {
+    display: flex;
+    justify-content: center; /* Centra los elementos del menú horizontalmente */
+    align-items: center; /* Centra los elementos del menú verticalmente */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    text-align: center; /* Centra el texto dentro del menú */
+} 
+.menu__header {
+    display: flex;
+    align-items: center; /* Centrar los elementos verticalmente */
+    gap: 10px; /* Espacio entre la imagen y el texto, ajusta según sea necesario */
+    margin-right: 5% ;
+}
+
+.menu img {
+    width: 30px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+}
+
+.menu__title {
+    
+    font-size: 2.5vw; /* Ajusta el tamaño de la fuente según sea necesario */
+    margin: 0; /* Asegúrate de que no haya márgenes adicionales */
+    color: rgb(253, 252, 255);
+}
+
+
+
+/* Sección Title */
+.title__container {
+    display: grid;
+    grid-template-columns: 1fr; /* Un solo elemento por fila en pantallas pequeñas */
+    flex-direction: column;
+    text-align: left;
+    margin: 0% 2% 2% 15%;
+    max-width: 800px; /* Establece el ancho máximo del contenedor */
+    min-width: 300px; /* Establece el ancho mínimo del contenedor */
+    gap: 5px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columnas */
+    margin-top: 100px;
+}
+
+.title__profile {
+    width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
+    max-width: 20%; /* Limita el tamaño máximo */
+    height: auto; /* Altura automática para mantener la proporción original */
+    border-radius: 50%; /* Forma circular */
+    border: 5px solid #fff; /* Borde blanco de 2px */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Sombra de resplandor */
+    margin: 0 20% 0 0; /* Centra la imagen */
+    opacity: 0; /* Oculta la imagen inicialmente */
+    animation: fadeIn 2s forwards; /* Añade la animación para aparecer */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Hace visible la imagen */
+    }
+}
+
+.title__div {
+    display: flex;
+    flex-direction: row-reverse; /* Organiza los elementos en filas */
+    justify-content: space-between; /* Distribuye los elementos a lo largo del eje principal */
+    align-items: center; /* Centra verticalmente los elementos */
+    
+}
+
+.title__network ul {
+    display: flex;
+    text-align: left;
+    margin-top: 20px; /* Espacio entre el texto y los enlaces */
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.title__network__item {
+    margin: 0 10px 0 0; /* Espacio entre los enlaces */
+}
+
+.title__bio {
+    font-size: 52px;
+    color: rgb(250, 151, 238);
+}
+
+.title__subsection {
+    font-size: 22px;
+    font-weight: normal;
+    color: #fff;
+}
+
+.title__bio,
+.title__subsection {
+    margin: 0;
+    padding: 5px 0;
+    line-height: 1.5; /* Establece la altura de línea */
+    margin-right: auto;
+    color: #fdfdfd;
+}
+
+.title__network {
+    margin: 0;
+    padding: 5px 0;
+    line-height: 1.5; /* Establece la altura de línea */
+    margin-right: auto;
+    color: #60faff;
+}
+
+/* Sección About */
+
+.about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente los elementos */
+    justify-content: center; /* Centra verticalmente los elementos */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    padding: 20px; /* Opcional: Añade un poco de padding */
+    margin: 20px 0; /* Espacio vertical entre secciones */
+    text-align: center; /* Centra el texto */
+}
+
+
+.about__title {
+    font-size: 32px;
+    margin-top: 32px;
+    color: rgb(250, 151, 238);
+}
+
+.about__paragraph {
+    font-size: 20px;
+    color: #fff;
+}
+
+
+
+
+/* Sección de Skills */
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra la columna principal */
+    margin-bottom: 20vh;
+}
+
+.skills__title {
+    margin-bottom: 16px; /* Espacio debajo del título */
+    color: #fba3b1;
+    font-size: 4vh;
+    font-weight: bold;
+    margin: 200px 0 50px 0;
+
+}
+
+.skills__box
+ {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente el contenido de cada caja */
+    width: 120px;
+    margin: 5px;
+    padding: 16px; /* Espacio interno para mejorar el layout */
+    text-align: center; /* Centra el texto dentro de cada caja */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco con 20% de opacidad */
+    border-radius: 8px; /* Bordes redondeados para una apariencia más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    backdrop-filter: blur(10px); /* Filtro de desenfoque para el efecto de vidrio esmerilado */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde blanco semitransparente */
+}
+
+.skills__box:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Cambia el color de fondo al pasar el puntero */
+}
+
+.skills__line {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si es necesario */
+    gap: 16px; /* Espacio horizontal y vertical entre los skills */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    margin-top: 32px; /* Espacio entre las líneas de skills y el título */
+}
+
+
+
+.skills__img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 8px; /* Espacio debajo de la imagen antes del texto */
+}
+
+.skills__name {
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(250, 151, 238);
+    margin-top: 8px; /* Espacio encima del texto */
+}
+
+
+
+
+/* Sección Hobbies */
+.hobbies {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centro la columna principal */
+    margin-bottom: 20vh;
+}
+
+.hobbies__box {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente el contenido de cada caja */
+    width: 120px;
+    margin: 5px;
+    padding: 16px; /* Espacio interno para mejorar el layout */
+    text-align: center; /* Centra el texto dentro de cada caja */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco con 20% de opacidad */
+    border-radius: 8px; /* Bordes redondeados para una apariencia más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    backdrop-filter: blur(10px); /* Filtro de desenfoque para el efecto de vidrio esmerilado */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde blanco semitransparente */
+}
+
+.hobbies__box:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Cambia el color de fondo al pasar el puntero */
+}
+
+.hobbies__title {
+    margin-bottom: 16px; /* Espacio debajo del título */
+    color: #fba3b1;
+    font-size: 4vh;
+    font-weight: bold;
+    margin: 100px 0 50px 0;
+
+}
+
+.hobbies__line {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si es necesario */
+    gap: 2px; /* Espacio horizontal y vertical entre los hobbies */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    margin-top: 32px; /* Espacio entre las líneas de hobbies y el título */
+}
+
+.hobbies__img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 8px; /* Espacio debajo de la imagen antes del texto */
+}
+
+.hobbies__name {
+    margin-top: 8px; /* Espacio encima del texto, por si necesitas ajustar */
+}
+
+/* Sección de Formación Académica */
+.academic {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra la columna principal */
+    margin-bottom: 30vh;
+}
+.academic__title {
+    margin-bottom: 16px; /* Espacio debajo del título */
+    color: #fba3b1;
+    font-size: 4vh;
+    font-weight: bold;
+    margin: 100px 0 50px 0;
+
+}
+.academic__courses__item__subtitle {
+    font-weight: bold;
+    font-size: 14px;
+    color: #666;
+    margin-top: auto; /* Empuja el párrafo hacia arriba */
+    margin-bottom: 4px; /* Espacio de 4px desde el borde inferior del contenedor */
+    text-align: center;
+}
+
+
+
+.academic__courses {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se dispongan en múltiples líneas */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    gap: 24px; /* Espacio entre las cajas de cursos */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    margin-top: 32px; /* Espacio entre las líneas de cursos y el título */
+}
+
+
+.academic__courses__box {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente el contenido de cada caja */
+    width: 150px;
+    padding: 16px; /* Espacio interno para mejorar el layout */
+    text-align: center; /* Centra el texto dentro de cada caja */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco con 20% de opacidad */
+    border-radius: 8px; /* Bordes redondeados para una apariencia más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    backdrop-filter: blur(10px); /* Filtro de desenfoque para el efecto de vidrio esmerilado */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde blanco semitransparente */
+}
+
+.academic__courses__box:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Cambia el color de fondo al pasar el puntero */
+}
+
+.academic__courses__item__img img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 16px; /* Espacio debajo de la imagen */
+}
+
+.academic__courses__item__title {
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    margin-top: 8px; /* Espacio encima del título */
+    margin-bottom: 4px; /* Espacio debajo del título */
+}
+
+.academic__courses__item__subtitle {
+    font-weight: bold;
+    font-size: 14px; /* Tamaño de fuente ajustado */
+    color: rgb(131, 69, 124);
+    margin-top: 4px; /* Espacio encima del subtítulo */
+    margin-bottom: 0;
+    text-align: center;
+}
+
+
+/* Estilos para la sección de Experiencia Profesional */
+
+.experience {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.experience__section__title {
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(67, 3, 59);
+    margin-bottom: 30px;
+}
+
+.experience__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1200px;
+    min-width: 150vh;
+    margin: 0 auto;
+}
+
+.project-box {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo más transparente */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.project__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project__video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+
+.project__info {
+    text-align: left;
+   
+}
+
+.project__title {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(67, 3, 59);
+    margin-bottom: 10px;
+    margin-right: 100vh;
+}
+
+.project__subtitle {
+    font-size: 20px;
+    font-weight: lighter;
+    color: #2d3735;
+    margin-bottom: 15px;
+}
+
+.project__description {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.project__buttons {
+    display: flex;
+    justify-content: flex-end; /* Alineación a la derecha */
+    margin-top: 10px; /* Ajuste del margen superior */
+}
+
+.project__button {
+    padding: 8px 16px; /* Tamaño más pequeño de los botones */
+    font-size: 14px; /* Tamaño más pequeño de la fuente */
+    border: none;
+    border-radius: 6px;
+    background-color:#60faff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px; /* Espacio entre botones */
+}
+
+.project__button:hover {
+    background-color: #3700b3;
+}
+
+
+/* create the paw prints */
+.pad {
+    width: 15px;
+    height: 17px;
+    background-color: #f38194;
+    -webkit-border-radius: 43px 43px 43px 43px / 108px     88px 62px 62px;
+    border-radius: 50%  50%  50%  50%  / 60%   60%         40%  40%;
+    display: block;
+    position: absolute;
+}       
+.large {
+   width: 30px;
+   height: 40px;
+   transform: rotate(80deg);
+   left: 100px;
+   top: 60px;
+} 
+.small-1 {
+   transform: rotate(50deg);
+   left: 130px;
+   top: 40px;
+}
+.small-2 {
+   transform: rotate(65deg);
+   left: 154px;
+   top: 60px;
+}  
+.small-3 {
+   transform: rotate(98deg);
+   position: absolute;
+   left: 158px;
+   top: 87px;
+}
+.small-4 {
+   transform: rotate(140deg);
+   position: absolute;
+   left: 138px;
+   top: 100px;
+}
+    
+/* position and animate */
+    
+.paw-print-1 {
+  opacity: 0;
+  position: absolute;
+  left: 75px;
+  top: 300px;
+  transform: rotate(-40deg);
+  -webkit-animation: walk 3s linear infinite;
+  animation: /*keyframe*/walk /*duration*/3s /*transition*/linear /*repeat*/infinite;
+}
+.paw-print-2 {
+  opacity: 0;
+  position: absolute;
+  left: 275px;
+  top: 280px;
+  transform: rotate(-5deg); 
+  -webkit-animation: walk 3s linear infinite 0.25s;
+  animation: walk 3s linear infinite /*delay*/0.25s;
+}
+.paw-print-3 {
+  opacity: 0;
+  position: absolute;
+  left: 375px;
+  top: 130px;
+  transform: rotate(-10deg); 
+  -webkit-animation: walk 3s linear infinite 0.5s;
+  animation: walk 3s linear infinite 0.5s;
+}     
+.paw-print-4 {
+  opacity: 0;
+  position: absolute;
+  left: 575px;
+  top: 280px;
+  transform: rotate(-20deg); 
+  -webkit-animation: walk 3s linear infinite 0.75s;
+  animation: walk 3s linear infinite 0.75s;
+}    
+.paw-print-5 {
+  opacity: 0;
+  position: absolute;
+  left: 725px;
+  top: 50px;
+  transform: rotate(10deg); 
+  -webkit-animation: walk 3s linear infinite 1s;
+  animation: walk 3s linear infinite 1s;
+}   
+.paw-print-6 {
+  opacity: 0;
+  position: absolute;
+  left: 875px;
+  top: 200px;
+  transform: rotate(10deg); 
+  -webkit-animation: walk 3s linear infinite 1.25s;
+  animation: walk 3s linear infinite 1.25s;
+}   
+.paw-print-7 {
+  opacity: 0;
+  position: absolute;
+  left: 1075px;
+  top: 50px;
+  transform: rotate(20deg); 
+  -webkit-animation: walk 3s linear infinite 1.5s;
+  animation: walk 3s linear infinite 1.5s;
+}   
+.paw-print-8 {
+  opacity: 0;
+  position: absolute;
+  left: 1150px;
+  top: 250px;
+  transform: rotate(10deg); 
+  -webkit-animation: walk 3s linear infinite 1.75s;
+  animation: walk 3s linear infinite 1.75s;
+}
+
+.campo-invalido {
+    border: 1px solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+    
+/* walking effect animation keyframes */
+    
+@-webkit-keyframes walk {
+  25%  {opacity: 1;}
+  100% {opacity: 0;}
+}
+    
+@keyframes walk {
+  /* appear */
+  25%  {opacity: 1;}
+  /* disappear */
+  100% {opacity: 0;}
+}
+
+
+/* Móvil */
+@media (min-width: 425px) {
+    /* Aquí irían los estilos específicos para dispositivos móviles */
+}
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+/* Tablet */
+@media (min-width: 768px) {
+    .box {
+        flex-direction: row;
+        justify-content: center; /* Centra horizontalmente los elementos */
+        align-items: center; /* Centra verticalmente los elementos */
+    }
+}
+
+/* Mobile */
+@media (min-width: 425px) {
+    .container {
+        padding: 10px; /* Ajusta el padding para mayor comodidad en móviles */
+    }
+}
+
+    
+    
+.DigitalIllustration__boxbox__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 50px;
+ }
+
+    .box .codificador__info,
+    .box .adivina__info {
+        display: flex;
+        margin-left: 10%;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 50px;
+    }
+
+    .experiencia__botao--repo,
+    .experience__botao--demo {
+        margin-top: 10px;
+    }
+
+    /* Contacto */
+    .formcontato {
+        width: 100%;
+    }
+    .formcontato__contacto {
+        display: flex;
+        width: 100%;
+        margin-left: 0;
+        
+    }
+
+    .formcontato--esquerda {
+        margin: 0% 0% 1% 0%;
+    }
+    
+    .formcontato__text {
+        padding: 22px;
+        width: 150vh;
+        color: rgb(250, 200, 244);
+        margin-left: 100px;
+    }
+    
+    .formcontato__form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .formcontato__img {
+        display: flex;
+        min-width: 400px;
+        
+    }
+    
+    .formcontato__input,
+    .formcontato__textarea {
+        margin-top: 32px;
+    }
+    
+    .formcontato__boton-container {
+        display: flex;
+        justify-content: center; /* Centra el botón horizontalmente */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    }
+    
+    .formcontato__boton {
+        margin-top: 32px;
+        width: 144px;
+        height: 51px;
+        background-color:aqua;
+        color:#fff;
+        font-weight: bolder;
+        border-radius: 10px;
+        border: 2px solid #fff; /* Borde blanco de 2px */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Sombra de resplandor */
+    }
+
+    /*footer*/
+    .footer {
+        text-align: center;
+        color: #F5F5F5;
+        min-height: 10vw;
+        min-width: 200vw;
+        background-color: #000;
+    }
+    
+    .footer__rodape  {
+        margin-bottom: 10%;
+        align-items:center;
+    }
+    
+    .footer__rodape p {
+        font-size: 16px; /* Tamaño de fuente */
+        color: #FFF; /* Color del texto */
+        margin: 10px 5px; /* Márgenes superior e inferior */
+        padding: 15px 5px;
+        text-align: center; /* Alineación del texto */
+    }
